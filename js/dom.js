@@ -130,19 +130,4 @@ const findBookIndex = (bookId) => {
     return -1;
 }
 
-document.addEventListener(RENDER_EVENT, () => {
-    const uncompletedReading = document.getElementById('uncompleteBookShelfList');
-    uncompletedReading.innerHTML = '';
 
-    const completedReading = document.getElementById('completeBookShelfList');
-    completedReading.innerHTML = '';
-   
-    for (const book of books) {
-       const bookElement = makeBook(book);
-       if (!book.isCompleted) {
-        uncompletedReading.append(bookElement);
-       } else {
-        completedReading.append(bookElement);
-       }
-    }
-});
