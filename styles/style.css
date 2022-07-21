@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&family=Noto+Sans+SC:wght@700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.book-header {
+    display: flex;
+    align-items: center;
+    background: #e65c00;
+    background: -webkit-linear-gradient(to right, #F9D423, #e65c00); 
+    background: linear-gradient(to right, #F9D423, #e65c00); 
+    justify-content: center;
+    padding: 25px 50px;
+}
+
+.book-header h1 {
+    flex: 1;
+    color: #B20600;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.book-header input {
+    padding: 15px;
+    padding-right: 100px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 12px;
+}
+
+.book-input {
+    max-width: 500px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: block;
+    padding: 20px;
+    margin: 10px auto;
+}
+
+.book-input h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.inputForm {
+    margin: 10px auto;
+}
+
+.inputForm input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.inputForm label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.input-inline {
+    margin: 20px auto;
+}
+
+.input-inline label {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.book-input button {
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: #e65c00;
+}
+
+.wrapper {
+    display: flex;
+    margin: 30px auto;
+}
+
+.book_shelf {
+    width: 100%;
+    margin: 20px;
+    border: 2px solid black;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.book_shelf h2 {
+    font-size: 25px;
+}
+
+.book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_item h3, p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.book_item button {
+    margin: 10px;
+    width: 25%;
+    cursor: pointer;
+    background: transparent;
+    font-size: 25px;
+    color : #e65c00;
+    border: 1px solid #e65c00;
+    border-radius: 10px;
+    
+}
+
+.book_item button:hover {
+    background: #e65c00;
+    color: white;
+}
+
+
+
+
+
+
