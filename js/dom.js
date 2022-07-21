@@ -57,7 +57,9 @@ const makeBook = (bookObject) => {
         trashButton.textContent = 'delete'
 
         trashButton.addEventListener('click', function() {
-            removeBook(bookObject.id)
+            if (confirm('Hapus Buku')) {
+                removeBook(bookObject.id)
+            }
         });
 
         textContainer.append(completeButton, trashButton)
@@ -76,7 +78,9 @@ const makeBook = (bookObject) => {
         trashButton.textContent = 'delete'
 
         trashButton.addEventListener('click', function() {
-            removeBook(bookObject.id)
+            if (confirm('Hapus Buku')) {
+                removeBook(bookObject.id)
+            }
         });
 
         textContainer.append(uncompleteButton, trashButton)
@@ -129,5 +133,3 @@ const findBookIndex = (bookId) => {
     }
     return -1;
 }
-
-
