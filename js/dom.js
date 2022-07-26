@@ -8,7 +8,7 @@ const addBook = () => {
     const checkbox = document.getElementById('inputBookIsComplete').checked;
     
     const generateID = generateId();
-    const bookObject = generateBookObject(generateID, textTitle, textAuthor, textRelease, checkbox);
+    const bookObject = generateBookObject(generateID,`Title : ` +textTitle, `Author : ` +textAuthor, `Release : ` +textRelease, checkbox);
     books.push(bookObject);
     
     document.dispatchEvent(new Event(RENDER_EVENT));
@@ -52,9 +52,13 @@ const makeBook = (bookObject) => {
             addBookToUncompleted(bookObject.id);
         });
 
+        const editButton = document.createElement('button');
+        editButton.classList.add('material-symbols-outlined');
+        editButton.textContent = 'edit';
+
         const trashButton = document.createElement('button');
         trashButton.classList.add('material-symbols-outlined');
-        trashButton.textContent = 'delete'
+        trashButton.textContent = 'delete'  
 
         trashButton.addEventListener('click', function() {
             if (confirm('Hapus Buku')) {
@@ -62,7 +66,7 @@ const makeBook = (bookObject) => {
             }
         });
 
-        textContainer.append(completeButton, trashButton)
+        textContainer.append(completeButton, editButton, trashButton)
         
     } else {
         const uncompleteButton = document.createElement('button');
@@ -73,6 +77,10 @@ const makeBook = (bookObject) => {
             addBookToCompleted(bookObject.id);
         });
 
+        const editButton = document.createElement('button');
+        editButton.classList.add('material-symbols-outlined');
+        editButton.textContent = 'edit';
+
         const trashButton = document.createElement('button');
         trashButton.classList.add('material-symbols-outlined');
         trashButton.textContent = 'delete'
@@ -83,7 +91,7 @@ const makeBook = (bookObject) => {
             }
         });
 
-        textContainer.append(uncompleteButton, trashButton)
+        textContainer.append(uncompleteButton, editButton, trashButton)
     }
 
     return textContainer;
@@ -132,4 +140,19 @@ const findBookIndex = (bookId) => {
         }
     }
     return -1;
+}
+
+const searchTitleBook = () => {
+    const filterTitle = document.getElementById('searchBookTitle').value.toLowerCase();
+    const titleBooks = document.querySelectorAll('.book_item');
+        
+        for (titleBook of titleBooks) {
+            const searchTitle = titleBook.firstChild.textContent.toLowerCase();
+            
+            if (searchTitle.indexOf(filterTitle) !== -1) {
+                titleBook.style.display = 'block';
+            } else {
+                titleBook.setAttribute('style', 'display : none');
+            }
+        }
 }

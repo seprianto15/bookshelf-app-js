@@ -3,7 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
     submitForm.addEventListener('submit', function(event) {
         event.preventDefault();
         addBook();
-    })
+    });
+    
+    const buttonSearch = document.getElementById('search-button');
+
+    buttonSearch.addEventListener('click', function(event) {
+        event.preventDefault();
+        searchTitleBook();
+    });
+
 });
 
 document.addEventListener(RENDER_EVENT, () => {

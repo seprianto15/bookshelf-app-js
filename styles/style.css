@@ -17,7 +17,7 @@ body {
     background: -webkit-linear-gradient(to right, #F9D423, #e65c00); 
     background: linear-gradient(to right, #F9D423, #e65c00); 
     justify-content: center;
-    padding: 25px 50px;
+    padding: 20px 40px;
 }
 
 .book-header h1 {
@@ -28,10 +28,21 @@ body {
 }
 
 .book-header input {
-    padding: 15px;
-    padding-right: 100px;
+    padding: 15px 50px 15px 15px;
     border-radius: 15px;
-    font-size: 18px;
+    font-size: 17px;
+}
+
+.book-header button {
+    padding: 14px;
+    font-size: 17px;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+}
+
+.book-header button:hover {
+    color: #e65c00
 }
 
 .container {

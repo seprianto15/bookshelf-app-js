@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Bookshelf</title>
 </head>
 <body>
+    
     <div class="book-header">
         <h1>Bookshelf App</h1>
-        <div class="book-search" id="searchBook">
-            <input id="searchBookTitle" type="text" placeholder="Search book ...">
+        <div class="book-search">
+            <form id="searchBook">
+                <input id="searchBookTitle" type="text" placeholder="Search book ..." name="search">
+                <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+            </form>
         </div>
     </div>
 
@@ -33,7 +38,7 @@
 
                 <div class="inputForm">
                     <label for="inputDate">Release</label>
-                    <input id="inputDate" type="number" required>
+                    <input id="inputDate" type='number' min='1945' max="2050" value='1945' required>
                 </div>
 
                 <div class="input-inline">
