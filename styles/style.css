@@ -17,7 +17,7 @@ body {
     background: -webkit-linear-gradient(to right, #F9D423, #e65c00); 
     background: linear-gradient(to right, #F9D423, #e65c00); 
     justify-content: center;
-    padding: 15px 30px;
+    padding: 20px 30px;
     position: sticky;
     top: 0;
 }
