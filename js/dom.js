@@ -67,7 +67,7 @@ const makeBook = (bookObject) => {
             }
         });
 
-        textContainer.append(completeButton, editButton, trashButton)
+        textContainer.append(completeButton, trashButton)
         
     } else {
         const uncompleteButton = document.createElement('button');
@@ -86,7 +86,7 @@ const makeBook = (bookObject) => {
             }
         });
 
-        textContainer.append(uncompleteButton, editButton, trashButton)
+        textContainer.append(uncompleteButton, trashButton)
     }
 
     return textContainer;
