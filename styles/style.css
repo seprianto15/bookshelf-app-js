@@ -17,7 +17,9 @@ body {
     background: -webkit-linear-gradient(to right, #F9D423, #e65c00); 
     background: linear-gradient(to right, #F9D423, #e65c00); 
     justify-content: center;
-    padding: 20px 40px;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
 }
 
 .book-header h1 {
@@ -67,79 +69,6 @@ body {
     text-transform: uppercase;
 }
 
-main.blur,
-header.blur {
-  filter: blur(6px);
-  pointer-events: none;
-}
-
-.modals {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-  transition: 0.23s ease, transform 0.5s ease;
-}
-
-.modals.show {
-  visibility: visible;
-  opacity: 1;
-  top: 50%;
-  transform: translateY(-50%);
-  /* transition: 0.23s ease; */
-}
-
-.modals .modals__content {
-  background-color: white;
-  width: 80%;
-  height: 100%;
-  padding: 0px 20px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.modals__content .modals__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px 10px;
-} 
-
-.modals__header span {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  font-weight: bold;
-  transform: scale(90%);
-  transition: 0.3s;
-}
-
-.modals__header span:hover {
-  transform: scale(140%);
-  
-}
-
-form#form-edit {
-  background-color: white;
-  width: inherit;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-}
-
 .inputForm {
     margin: 10px auto;
 }
@@ -181,14 +110,13 @@ form#form-edit {
 }
 
 .wrapper {
-    display: flex;
-    margin: 30px auto;
+    margin: 50px auto;
 }
 
 .book_shelf {
     width: 100%;
-    margin: 20px;
-    border: 2px solid black;
+    margin: 50px auto;
+    border: 3px solid black;
     padding: 16px;
     border-radius: 10px;
     background-color: #fff;
@@ -201,26 +129,27 @@ form#form-edit {
 
 .book_item {
     padding: 8px 16px 16px 16px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .book_item h3, p {
     margin: 10px 0;
     text-align: justify;
+    font-size: 22px;
+    display: flex;
 }
 
 .book_item button {
     margin: 10px;
-    width: 25%;
+    width: 10%;
     cursor: pointer;
     background: transparent;
     font-size: 25px;
     color : #e65c00;
     border: 1px solid #e65c00;
     border-radius: 10px;
-    
 }
 
 .book_item button:hover {
@@ -228,7 +157,23 @@ form#form-edit {
     color: white;
 }
 
+@media only screen and (max-width: 900px) {
+    .book-header {
+        padding: 14px 14px;
+    }
 
+    .book-header h1 {
+        font-size: 35px;
+    }
+    
+    .book-header input {
+        font-size: 12px;
+    }
+
+    .book-header button {
+        font-size: 12px;
+    }
+}
 
 
 
