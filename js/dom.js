@@ -62,7 +62,7 @@ const makeBook = (bookObject) => {
         trashButton.classList.add('material-symbols-outlined');
         trashButton.textContent = 'delete'  
         trashButton.addEventListener('click', function() {
-            if (confirm('Delete book')) {
+            if (confirm('Delete Book')) {
                 removeBook(bookObject.id);
             }
         });
@@ -81,7 +81,7 @@ const makeBook = (bookObject) => {
         trashButton.classList.add('material-symbols-outlined');
         trashButton.textContent = 'delete'
         trashButton.addEventListener('click', function() {
-            if (confirm('Delete book')) {
+            if (confirm('Delete Book')) {
                 removeBook(bookObject.id)
             }
         });
