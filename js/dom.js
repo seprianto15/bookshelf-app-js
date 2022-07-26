@@ -58,18 +58,11 @@ const makeBook = (bookObject) => {
             addBookToUncompleted(bookObject.id);
         });
 
-        const editButton = document.createElement('button');
-        editButton.classList.add('material-symbols-outlined');
-        editButton.textContent = 'edit';
-        editButton.addEventListener('click', function() {
-            updateBook(bookObject.id);
-        });
-
         const trashButton = document.createElement('button');
         trashButton.classList.add('material-symbols-outlined');
         trashButton.textContent = 'delete'  
         trashButton.addEventListener('click', function() {
-            if (confirm('Hapus buku')) {
+            if (confirm('Delete book')) {
                 removeBook(bookObject.id);
             }
         });
@@ -84,18 +77,11 @@ const makeBook = (bookObject) => {
             addBookToCompleted(bookObject.id);
         });
 
-        const editButton = document.createElement('button');
-        editButton.classList.add('material-symbols-outlined');
-        editButton.textContent = 'edit';
-        editButton.addEventListener('click', function() {
-            updateBook(bookObject.id);
-        });
-
         const trashButton = document.createElement('button');
         trashButton.classList.add('material-symbols-outlined');
         trashButton.textContent = 'delete'
         trashButton.addEventListener('click', function() {
-            if (confirm('Hapus buku')) {
+            if (confirm('Delete book')) {
                 removeBook(bookObject.id)
             }
         });
