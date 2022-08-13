@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitForm = document.getElementById('inputBook');
     submitForm.addEventListener('submit', function(event) {
         event.preventDefault();
+        Swal.fire({
+            title: 'Your book has been added to bookshelf',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500
+          })
         addBook();
     });
 
