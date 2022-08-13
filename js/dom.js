@@ -62,9 +62,24 @@ const makeBook = (bookObject) => {
         trashButton.classList.add('material-symbols-outlined');
         trashButton.textContent = 'delete'  
         trashButton.addEventListener('click', function() {
-            if (confirm('Delete Book')) {
-                removeBook(bookObject.id);
-            }
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "The book will be deleted!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    'Deleted!',
+                    'Your book has been deleted.',
+                    'success'
+                  )
+                  removeBook(bookObject.id);
+                }
+              })
         });
 
         textContainer.append(completeButton, trashButton)
@@ -81,9 +96,24 @@ const makeBook = (bookObject) => {
         trashButton.classList.add('material-symbols-outlined');
         trashButton.textContent = 'delete'
         trashButton.addEventListener('click', function() {
-            if (confirm('Delete Book')) {
-                removeBook(bookObject.id)
-            }
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "The book will be deleted!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    'Deleted!',
+                    'Your book has been deleted.',
+                    'success'
+                  )
+                  removeBook(bookObject.id);
+                }
+              })
         });
 
         textContainer.append(uncompleteButton, trashButton)
